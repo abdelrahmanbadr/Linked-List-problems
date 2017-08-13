@@ -80,5 +80,32 @@ public class Mylist
     head.next = prev;
     first_node.next = null;
   }
+  public void reverse (int A,int B)
+  {
+  	Node ref,prev,curr,next,before_A , A_node;
+    ref = prev = curr= before_A = head;
+    
+    int i =1;
+    while(i <= A){
+      before_A  = ref;
+      prev = ref.next;
+      ref = ref.next;
+      i ++;
+    }
+    A_node = ref;
+    ref = ref.next;
+    while(i <= B){
+      curr =ref;
+      ref = ref.next;
+      next = curr.next;
+      curr.next= prev;
+      prev = curr;
+      i ++;
+    }
+    before_A.next = curr;
+    A_node.next = ref;
+    
+  }
+  
   
 }
