@@ -77,6 +77,7 @@ public class Mylist
     this.reverse(p.next);
         curr = p.next;
     curr.next = p;
+     // to make last node .next == null
     p.next = null;
     
    
