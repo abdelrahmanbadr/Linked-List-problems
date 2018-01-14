@@ -47,41 +47,38 @@ public class Mylist
   {
   	return head;
   }
-public void print (Node head){
-      if(head == null){
-    	return;
+    public void print (Node head)
+    {
+      if(head == null)
+      {
+    	  return;
+      } 
+      System.out.println(head.value);
+      this.print(head.next); 
     }
-       
-       System.out.println(head.value);
-      this.print(head.next);
-      
-      
-    }
-    public int count(){
-  Node myref=head;
+  
+   public int count()
+   {
+    Node myref=head;
     int i=1;
     while(myref.next !=null)
     {
       myref=myref.next;
-      i++;
-      
+      i++;   
     }
-    return i;
-    
+    return i; 
   }
   
   
   public void add(int v,int index)
   {
-    
-    Node newnode=new Node(v);
+     Node newnode=new Node(v);
      Node myref=head;
     
     if(index == 0)
     {
       newnode.next=head;
-      head=newnode;
-      
+      head=newnode;  
     }
     else
     {
@@ -94,7 +91,8 @@ public void print (Node head){
     }
   
   }
-  public void halfReverse(){
+  public void halfReverse()
+  {
     int count = this.count();
     this.count = count;
     int j = count /2;
@@ -106,14 +104,14 @@ public void print (Node head){
       j --;
       
     }
-    this.reverse(ref);
-    
-    
-    
+    this.reverse(ref); 
   }
-  public void reverse(Node p){
+  
+  public void reverse(Node p)
+  {
     Node curr;
-    if(p.next == null){
+    if(p.next == null)
+    {
       this.end = p;
     	return;
     }
@@ -121,8 +119,9 @@ public void print (Node head){
         curr = p.next;
         curr.next = p; 
   }
-  public void doStuff(){
-     Node start = this.head;
+  public void doStuff()
+  {
+    Node start = this.head;
     Node end = this.end;
     Node next_st,next_end;
      int count = this.count;
