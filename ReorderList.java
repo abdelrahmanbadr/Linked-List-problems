@@ -1,8 +1,8 @@
 //   L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
-//   Given {1,2,3,4}, reorder it to {1,4,2,3}.
+//   {1,2,3,4}, reorder it to {1,4,2,3}.
 public class ReorderList
 {
-  // arguments are passed using the text field below this editor
+  
   public static void main(String[] args)
   {
     Mylist myObject = new Mylist();
